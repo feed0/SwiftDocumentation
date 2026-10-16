@@ -8,15 +8,6 @@
 import Foundation
 
 public struct PhotoModel {
-
-    // MARK: - Init
-    
-    init(
-        name: String,
-    ) {
-        self.name = name
-        self.data = "📷 [\(name)]".data(using: .utf8)!
-    }
     
     // MARK: - Properties
     
@@ -25,11 +16,16 @@ public struct PhotoModel {
     
     // MARK: Computed properties
     
-    var byteCount: Int { data.count }
-}
-
-// MARK: - Sample data
-
-extension PhotoModel {
-    public static let sample = PhotoModel(name: "sample.jpg")
+    var byteCount: Int {
+        data.count
+    }
+    
+    // MARK: - Init
+    
+    init(
+        name: String,
+    ) {
+        self.name = name
+        self.data = Data("📷 [\(name)]".utf8)
+    }
 }

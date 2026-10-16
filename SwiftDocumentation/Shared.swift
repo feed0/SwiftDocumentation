@@ -14,10 +14,12 @@ import Foundation
 
 // MARK: - Functions
 
+// MARK: Show photo
+
 /// Shows a single given photo
 @MainActor
 public func show(_ photo: PhotoModel) {
-    print("🖼️ Displaying photo bytes: \(photo.byteCount) bytes")
+    print("🖼️ Displaying photo \(photo.name) bytes: \(photo.byteCount) bytes")
 }
 
 /// Shows a collections of given photos
@@ -25,6 +27,8 @@ public func show(_ photo: PhotoModel) {
 public func show(_ photos: [PhotoModel]) {
     print("🖼️ Displaying a gallery of \(photos.count) photos.")
 }
+
+// MARK: Download photo
 
 /// Pretends a network call
 public func downloadPhoto(named name: String) async -> PhotoModel {

@@ -8,6 +8,7 @@
 import Testing
 import Foundation
 
+@Suite(.serialized)
 struct ConcurrencyTests {
     
     /// https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/#Defining-and-Calling-Asynchronous-Functions

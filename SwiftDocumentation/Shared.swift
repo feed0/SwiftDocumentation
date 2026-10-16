@@ -17,13 +17,11 @@ import Foundation
 // MARK: Show photo
 
 /// Shows a single given photo
-@MainActor
 public func show(_ photo: PhotoModel) {
     print("🖼️ Displaying photo \(photo.name) bytes: \(photo.byteCount) bytes")
 }
 
 /// Shows a collections of given photos
-@MainActor
 public func show(_ photos: [PhotoModel]) {
     print("🖼️ Displaying a gallery of \(photos.count) photos.")
 }

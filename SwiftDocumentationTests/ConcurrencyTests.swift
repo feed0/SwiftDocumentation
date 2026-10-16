@@ -1,6 +1,6 @@
 //
 //  ConcurrencyTests.swift
-//  DocumentationTests
+//  SwiftDocumentationTests
 //
 //  Created by feed0 on 2026/06/08.
 //

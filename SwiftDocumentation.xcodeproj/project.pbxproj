@@ -19,43 +19,43 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		094867992FD700BE005D2662 /* Documentation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Documentation; sourceTree = BUILT_PRODUCTS_DIR; };
-		094867AB2FD70138005D2662 /* DocumentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DocumentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		094867992FD700BE005D2662 /* SwiftDocumentation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftDocumentation; sourceTree = BUILT_PRODUCTS_DIR; };
+		094867AB2FD70138005D2662 /* SwiftDocumentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDocumentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		094867D32FD7041A005D2662 /* Exceptions for "DocumentationTests" folder in "Documentation" target */ = {
+		094867D32FD7041A005D2662 /* Exceptions for "SwiftDocumentationTests" folder in "SwiftDocumentation" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ConcurrencyTests.swift,
 			);
-			target = 094867982FD700BE005D2662 /* Documentation */;
+			target = 094867982FD700BE005D2662 /* SwiftDocumentation */;
 		};
-		094867D52FD704D1005D2662 /* Exceptions for "Documentation" folder in "DocumentationTests" target */ = {
+		094867D52FD704D1005D2662 /* Exceptions for "SwiftDocumentation" folder in "SwiftDocumentationTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				PhotoModel.swift,
 				Shared.swift,
 			);
-			target = 094867AA2FD70138005D2662 /* DocumentationTests */;
+			target = 094867AA2FD70138005D2662 /* SwiftDocumentationTests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0948679B2FD700BE005D2662 /* Documentation */ = {
+		0948679B2FD700BE005D2662 /* SwiftDocumentation */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				094867D52FD704D1005D2662 /* Exceptions for "Documentation" folder in "DocumentationTests" target */,
+				094867D52FD704D1005D2662 /* Exceptions for "SwiftDocumentation" folder in "SwiftDocumentationTests" target */,
 			);
-			path = Documentation;
+			path = SwiftDocumentation;
 			sourceTree = "<group>";
 		};
-		094867AC2FD70138005D2662 /* DocumentationTests */ = {
+		094867AC2FD70138005D2662 /* SwiftDocumentationTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				094867D32FD7041A005D2662 /* Exceptions for "DocumentationTests" folder in "Documentation" target */,
+				094867D32FD7041A005D2662 /* Exceptions for "SwiftDocumentationTests" folder in "SwiftDocumentation" target */,
 			);
-			path = DocumentationTests;
+			path = SwiftDocumentationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -81,8 +81,8 @@
 		094867902FD700BE005D2662 = {
 			isa = PBXGroup;
 			children = (
-				0948679B2FD700BE005D2662 /* Documentation */,
-				094867AC2FD70138005D2662 /* DocumentationTests */,
+				0948679B2FD700BE005D2662 /* SwiftDocumentation */,
+				094867AC2FD70138005D2662 /* SwiftDocumentationTests */,
 				0948679A2FD700BE005D2662 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +90,8 @@
 		0948679A2FD700BE005D2662 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				094867992FD700BE005D2662 /* Documentation */,
-				094867AB2FD70138005D2662 /* DocumentationTests.xctest */,
+				094867992FD700BE005D2662 /* SwiftDocumentation */,
+				094867AB2FD70138005D2662 /* SwiftDocumentationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +99,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		094867982FD700BE005D2662 /* Documentation */ = {
+		094867982FD700BE005D2662 /* SwiftDocumentation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 094867A02FD700BE005D2662 /* Build configuration list for PBXNativeTarget "Documentation" */;
+			buildConfigurationList = 094867A02FD700BE005D2662 /* Build configuration list for PBXNativeTarget "SwiftDocumentation" */;
 			buildPhases = (
 				094867952FD700BE005D2662 /* Sources */,
 				094867962FD700BE005D2662 /* Frameworks */,
@@ -112,18 +112,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0948679B2FD700BE005D2662 /* Documentation */,
+				0948679B2FD700BE005D2662 /* SwiftDocumentation */,
 			);
-			name = Documentation;
+			name = SwiftDocumentation;
 			packageProductDependencies = (
 			);
-			productName = Documentation;
-			productReference = 094867992FD700BE005D2662 /* Documentation */;
+			productName = SwiftDocumentation;
+			productReference = 094867992FD700BE005D2662 /* SwiftDocumentation */;
 			productType = "com.apple.product-type.tool";
 		};
-		094867AA2FD70138005D2662 /* DocumentationTests */ = {
+		094867AA2FD70138005D2662 /* SwiftDocumentationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 094867AF2FD70138005D2662 /* Build configuration list for PBXNativeTarget "DocumentationTests" */;
+			buildConfigurationList = 094867AF2FD70138005D2662 /* Build configuration list for PBXNativeTarget "SwiftDocumentationTests" */;
 			buildPhases = (
 				094867A72FD70138005D2662 /* Sources */,
 				094867A82FD70138005D2662 /* Frameworks */,
@@ -134,13 +134,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				094867AC2FD70138005D2662 /* DocumentationTests */,
+				094867AC2FD70138005D2662 /* SwiftDocumentationTests */,
 			);
-			name = DocumentationTests;
+			name = SwiftDocumentationTests;
 			packageProductDependencies = (
 			);
-			productName = DocumentationTests;
-			productReference = 094867AB2FD70138005D2662 /* DocumentationTests.xctest */;
+			productName = SwiftDocumentationTests;
+			productReference = 094867AB2FD70138005D2662 /* SwiftDocumentationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 094867942FD700BE005D2662 /* Build configuration list for PBXProject "Documentation" */;
+			buildConfigurationList = 094867942FD700BE005D2662 /* Build configuration list for PBXProject "SwiftDocumentation" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -176,8 +176,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				094867982FD700BE005D2662 /* Documentation */,
-				094867AA2FD70138005D2662 /* DocumentationTests */,
+				094867982FD700BE005D2662 /* SwiftDocumentation */,
+				094867AA2FD70138005D2662 /* SwiftDocumentationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -361,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = name.feed0.DocumentationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = name.feed0.SwiftDocumentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -379,7 +379,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = name.feed0.DocumentationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = name.feed0.SwiftDocumentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -393,7 +393,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		094867942FD700BE005D2662 /* Build configuration list for PBXProject "Documentation" */ = {
+		094867942FD700BE005D2662 /* Build configuration list for PBXProject "SwiftDocumentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0948679E2FD700BE005D2662 /* Debug */,
@@ -402,7 +402,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		094867A02FD700BE005D2662 /* Build configuration list for PBXNativeTarget "Documentation" */ = {
+		094867A02FD700BE005D2662 /* Build configuration list for PBXNativeTarget "SwiftDocumentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				094867A12FD700BE005D2662 /* Debug */,
@@ -411,7 +411,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		094867AF2FD70138005D2662 /* Build configuration list for PBXNativeTarget "DocumentationTests" */ = {
+		094867AF2FD70138005D2662 /* Build configuration list for PBXNativeTarget "SwiftDocumentationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				094867B02FD70138005D2662 /* Debug */,

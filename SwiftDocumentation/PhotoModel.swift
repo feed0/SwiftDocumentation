@@ -1,6 +1,6 @@
 //
 //  PhotoModel.swift
-//  Documentation
+//  SwiftDocumentation
 //
 //  Created by feed0 on 2026/06/08.
 //

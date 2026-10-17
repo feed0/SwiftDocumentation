@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct PhotoModel {
+struct PhotoModel {
     
     // MARK: - Properties
     

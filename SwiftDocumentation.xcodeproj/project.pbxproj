@@ -34,6 +34,7 @@
 		094867D52FD704D1005D2662 /* Exceptions for "SwiftDocumentation" folder in "SwiftDocumentationTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				GalleryModel.swift,
 				PhotoModel.swift,
 				Shared.swift,
 			);

@@ -2,13 +2,16 @@
 //  PhotoModel+Mock.swift
 //  SwiftDocumentationTests
 //
-//  Created by Felipe Campelo on 16/10/26.
+//  Created by Felipe Campelo on 2026/10/16.
 //
 
 import Foundation
 
 extension PhotoModel {
-    public static let sample = PhotoModel(
+    
+    // MARK: - Mocks
+    
+    static let photoMock = PhotoModel(
         name: "sample.jpg",
     )
 }

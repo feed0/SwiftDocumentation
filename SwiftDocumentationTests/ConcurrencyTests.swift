@@ -11,27 +11,53 @@ import Foundation
 @Suite(.serialized)
 struct ConcurrencyTests {
     
-    /// https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/#Defining-and-Calling-Asynchronous-Functions
-    @Test("Sequential async execution")
-    func downloadPhotoFlow() async {
-        /// Arrange
-        print("\t▶️ Start: Preparing to download photo...")
-        
+    // MARK: - Defining and Calling Asynchronous Functions
+    // https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/#Defining-and-Calling-Asynchronous-Functions
+    
+    /// Synchronous functions/methods either i. return, or ii. throw, or iii. never return.
+    /// While asynchronous ones do one of the three, but also can suspend in the middle of instructions.
+    /// Asynchronous code can only be called from other async code. Even this test function!
+    @Test("Async execution")
+    func downloadPhoto_AsyncFunc() async {
+        // Arrange
+        print("\t▶️ Start: Preparing to download photo.")
         let name = "Summer_Vacation_01"
         
-        /// Act
+        // Act
+        print("\t🔄 Suspension: waiting for response...")
         let photo = await downloadPhoto(named: name)
         
-        /// Assert
+        // Assert
         #expect(!photo.data.isEmpty)
         print("\t📦 Downloaded \(photo.byteCount) bytes for \(name).")
         print("\t⏹️ End: Photo processing complete.")
     }
     
-    /// https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/#Asynchronous-Sequences
+    @Test("Async execution")
+    func listPhotos_AsyncFunc() async {
+        // Arrange
+        print("\t▶️ Start: Preparing to fetch photo names.")
+        let galleryName = "Summer Vacation"
+        
+        // Act
+        print("\t🔄 Suspension: waiting for response...")
+        let photoNames = await listPhotos(inGallery: galleryName)
+        
+        // Assert
+        #expect(!photoNames.isEmpty)
+        print("\t📦 Fetched all \(photoNames.count) photo(s) name(s) at once:")
+        for photoName in photoNames {
+            show(PhotoModel(name: photoName))
+        }
+        print("\t⏹️ End: Gallery fetch complete.")
+    }
+    
+    // MARK: - Asynchronous Sequences
+    // https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/#Asynchronous-Sequences
+    
     @Test("Async array stream")
     func donwloadMultiplePhotos() async {
-        /// Arrange
+        // Arrange
         print("\t▶️ Start: Preparing to download multiple photos...")
         
         let photoNames = ["Sunset", "Mountain", "City_Lights", "Whale", "Dawn", "Dusk", "Tides", "Waves", "Model", "Editorial"]
@@ -46,16 +72,18 @@ struct ConcurrencyTests {
             }
         }
         
-        /// Act
+        // Act
         for await photo in photosAsyncStream {
             print("\t📦 Downloaded \(photo.data.count) bytes for {\(photo.name)}.")
         }
         
-        /// Assert
+        // Assert
         print("\t⏹️ End: Multiple photos processing complete.")
     }
     
-    /// https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/#Calling-Asynchronous-Functions-in-Parallel
+    // MARK: - Calling Asynchronous Functions in Parallel
+    // https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/#Calling-Asynchronous-Functions-in-Parallel
+    
     @Test(
         "Async functions in parallel",
         arguments: [
@@ -64,7 +92,7 @@ struct ConcurrencyTests {
         ]
     )
     func sequentialAndParallelDownloads(isParalel: Bool) async {
-        /// Sequential
+        // Sequential
         if !isParalel {
             print("\t▶️ Start: Sequential downloads...")
             
@@ -76,7 +104,7 @@ struct ConcurrencyTests {
             print("\t⏹️ End: Sequential downloads complete.")
         }
         
-        /// Parallel
+        // Parallel
         if isParalel {
             Task {
                 print("\t▶️ Start: Parallel downloads...")

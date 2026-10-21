@@ -7,9 +7,9 @@
 
 import Foundation
 
+// MARK: - Mocks
+
 extension GalleryModel {
-    
-    // MARK: - Mocks
     
     static let emptyMock = GalleryModel(name: "Empty Galllery")
     
@@ -19,6 +19,21 @@ extension GalleryModel {
             "DSF00001.RAF",
             "DSF00002.RAF",
             "DSF00003.RAF",
+            "DSF00004.RAF",
+            "DSF00005.RAF",
+            "DSF00006.RAF",
+            "DSF00007.RAF",
+            "DSF00008.RAF",
+            "DSF00009.RAF",
+            "DSF00010.RAF",
         ]
     )
+}
+
+// MARK: - Galleries enum
+
+extension GalleryModel {
+    enum Galleries: String {
+        case summerVacation = "Summer Vacation"
+    }
 }

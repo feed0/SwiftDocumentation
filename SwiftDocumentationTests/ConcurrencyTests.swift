@@ -21,23 +21,24 @@ struct ConcurrencyTests {
     func downloadPhoto_AsyncFunc() async {
         // Arrange
         print("\t▶️ Start: Preparing to download photo.")
-        let name = "Summer_Vacation_01"
+        let photoName = PhotoModel.photoMock.name
         
         // Act
         print("\t🔄 Suspension: waiting for response...")
-        let photo = await downloadPhoto(named: name)
+        let photo = await downloadPhoto(named: photoName)
         
         // Assert
         #expect(!photo.data.isEmpty)
-        print("\t📦 Downloaded \(photo.byteCount) bytes for \(name).")
+        print("\t📦 Downloaded \(photo.byteCount) bytes for \(photoName).")
         print("\t⏹️ End: Photo processing complete.")
     }
     
+    /// asynchronously returns the whole array at once, after all of the array’s elements are ready.
     @Test("Async execution")
     func listPhotos_AsyncFunc() async {
         // Arrange
         print("\t▶️ Start: Preparing to fetch photo names.")
-        let galleryName = "Summer Vacation"
+        let galleryName = GalleryModel.Galleries.summerVacation.rawValue
         
         // Act
         print("\t🔄 Suspension: waiting for response...")
@@ -55,12 +56,13 @@ struct ConcurrencyTests {
     // MARK: - Asynchronous Sequences
     // https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/#Asynchronous-Sequences
     
+    /// Waits for the download of one photo of the collection at a time using an `asynchronous sequence`.
     @Test("Async array stream")
     func donwloadMultiplePhotos() async {
         // Arrange
         print("\t▶️ Start: Preparing to download multiple photos...")
         
-        let photoNames = ["Sunset", "Mountain", "City_Lights", "Whale", "Dawn", "Dusk", "Tides", "Waves", "Model", "Editorial"]
+        let photoNames = GalleryModel.summerVacationMock.photoNames
         
         let photosAsyncStream = AsyncStream<PhotoModel> { continuation in
             Task {

@@ -12,6 +12,6 @@ extension PhotoModel {
     // MARK: - Mocks
     
     static let photoMock = PhotoModel(
-        name: "sample.jpg",
+        name: "photoMock.jpg",
     )
 }

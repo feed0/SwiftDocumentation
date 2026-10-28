@@ -27,7 +27,7 @@
 		094867D32FD7041A005D2662 /* Exceptions for "SwiftDocumentationTests" folder in "SwiftDocumentation" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				ConcurrencyTests.swift,
+				Tests/Concurrency/ConcurrencyTests.swift,
 			);
 			target = 094867982FD700BE005D2662 /* SwiftDocumentation */;
 		};

@@ -40,14 +40,23 @@ func listPhotos(inGallery name: String) async -> [String] {
 // MARK: Show photo
 
 /// Shows a single given photo
-func show(_ photo: PhotoModel) {
-    print("🖼️ Displaying photo '\(photo.name)' bytes: \(photo.byteCount) bytes")
+func show(
+    _ photo: PhotoModel,
+    prefix: String = "",
+) {
+    print("\(prefix)🖼️ Displaying photo '\(photo.name)' bytes: \(photo.byteCount) bytes")
 }
 
 /// Shows a collections of given photos
-func show(_ photos: [PhotoModel]) {
-    print("🖼️ Displaying a gallery of \(photos.count) photos.")
+func show(
+    _ photos: [PhotoModel],
+    prefix: String = "",
+) {
+    print("\(prefix)🖼️ Displaying a gallery of \(photos.count) photos:")
     for photo in photos {
-        show(photo)
+        show(
+            photo,
+            prefix: prefix,
+        )
     }
 }
